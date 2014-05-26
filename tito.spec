@@ -18,6 +18,23 @@ BuildRequires: asciidoc
 BuildRequires: docbook-style-xsl
 BuildRequires: libxslt
 BuildRequires: rpmdevtools
+BuildRequires: rpm-build
+BuildRequires: createrepo
+BuildRequires: tar
+BuildRequires: which
+
+%if 0%{?fedora} >= 20
+# todo: add %check to spec file in accordance with
+# https://fedoraproject.org/wiki/QA/Testing_in_check
+BuildRequires: git
+BuildRequires: git-annex
+BuildRequires: python-mock python3-mock
+BuildRequires: python-nose python3-nose
+BuildRequires: python-pep8 python3-pep8
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
+BuildRequires: rpm-python3
+%endif
 
 Requires: python-setuptools
 Requires: rpm-build
